@@ -12,10 +12,12 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bourbon'
 gem 'neat'
-gem 'devise'
+gem 'devise', '~> 3.5.2'
 gem 'bcrypt', '~> 3.1.7'
 gem 'font-awesome-sass'
 gem 'unicorn'
+gem 'haml', '~> 4.0.7'
+gem 'simple_form', '~> 3.1.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

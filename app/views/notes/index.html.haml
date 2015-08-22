@@ -1,5 +1,26 @@
-- @notes.each do |note|
-  %h2= link_to note.title, note
-  %p= time_ago_in_words(note.created_at)
-
-= link_to "New Note", new_note_path
+.notes-wrapper
+  - unless @notes.blank?
+    .note-box
+      .box-header
+        %h3= link_to "New Note", new_note_path
+    -@notes.reverse.each do |note|
+      %a{ href: (url_for [note])}
+        .note-box
+          .box-header
+            %h2.title= note.title
+          %p.date
+            = time_ago_in_words(note.created_at)
+            ago
+          .note-edit
+            %p
+              = link_to edit_note_path(note) do
+                %i.fa.fa-pencil-square-o
+              = link_to note, method: :delete, data: { confirm: 'Are you sure?' } do
+                %i.fa.fa-trash-o
+  - else
+    .note-box
+      .box-header
+        %h2 Add a Note
+      .note-edit
+        %p It appears you haven't added any notes yet... Add one below
+        %button= link_to "New Note", new_note_path

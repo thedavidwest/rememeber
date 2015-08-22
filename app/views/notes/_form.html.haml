@@ -1,4 +1,9 @@
-= simple_form_for @note do |f|
-  = f.input :title
-  = f.input :content
-  = f.button :submit
+.show-wrapper
+  .show-box
+    = simple_form_for @note do |f|
+      .show-header
+        = f.input :title
+      .show-content
+        = f.input :content
+      .show-links
+        = f.button :submit

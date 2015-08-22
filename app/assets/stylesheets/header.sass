@@ -1,0 +1,35 @@
+header
+  +outer-container(100%)
+  background: $black
+  border-bottom: 7px solid $red
+  position: relative
+  a
+    +red-link
+  h1
+    +span-columns(2)
+    padding: 20px 0 20px 20px
+    font-size: 40px
+    font-family: 'Satisfy'
+    text-transform: capitalize
+    margin: 0
+  .button-wrap
+    +span-columns(10)
+    .button
+      position: relative
+      top: 21px
+      background: $red
+      padding: 10px 0
+      border-radius: 0
+      width: 100px
+      text-align: center
+      display: inline-block
+      margin: 0 10px
+      float: right
+      a
+        color: $white
+        transition: .3s ease-in-out
+        &:hover
+          background: $red
+          color: $black
+      @media(max-width: 600px)
+        width: 75px

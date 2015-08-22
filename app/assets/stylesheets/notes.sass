@@ -1,0 +1,106 @@
+// Index
+
+.notes-wrapper
+  +display(flex)
+  +flex-wrap(wrap)
+  +justify-content(center)
+  +outer-container(100%)
+  a
+    +white-link
+
+  .note-box
+    color: $white
+    width: 300px
+    height: 100%
+    background: $black
+    margin: 25px
+    text-align: center
+    box-shadow: 0px 0px 5px 1px transparentize($black, .7)
+
+    .box-header
+      h2
+        font:
+          family: 'Abril Fatface'
+          weight: 400
+          size: 20px
+        text-transform: uppercase
+        padding: 10px 10px
+        margin: 0
+      h3
+        font:
+          family: 'Abril Fatface'
+          weight: 400
+          size: 24px
+        text-transform: uppercase
+        padding: 46px
+        margin-bottom: 0
+        a
+          +red-link
+
+    p
+      background: $dark-greyblue
+      font:
+        size: 10px
+      color: $red
+      text-transform: uppercase
+      padding: 5px 0
+
+    .note-edit
+      p
+        display: inline-block
+        padding: 10px 10px
+        width: 100%
+        font-size: 20px
+        text-transform: lowercase
+        border-top: 1px solid $grey4
+      a
+        +white-link
+
+// Show Page
+
+.show-wrapper
+  +display(flex)
+  +justify-content(center)
+  +align-items(center)
+  color: $white
+  .show-box
+    width: 750px
+    height: auto
+    background: $black
+    box-shadow: 0px 0px 5px 1px transparentize($black, .7)
+    padding: 25px
+    margin-top: 50px
+    position: relative
+    @media (max-width: 700px)
+      max-width: 600px
+    .show-header
+      border-bottom: 1px solid $red
+      h1
+        font:
+          family: 'Abril Fatface', serif
+          size: 24px
+        text-transform: uppercase
+        margin-bottom: 0
+
+      input[type="text"]
+        background: transparent
+        border: none
+
+    .show-content
+      margin: 10px 0 50px 0
+
+    .show-edit
+      a
+        +red-link
+
+    .show-links
+      margin-top: 20px
+      a
+        background: $red
+        padding: 10px 20px
+        color: $white
+        transition: .3s ease-in-out
+        &:hover
+          color: $black
+
+// New Notes

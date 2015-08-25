@@ -1,8 +1,11 @@
 header
-  +outer-container(100%)
+  width: 100%
   background: $black
   border-bottom: 7px solid $red
-  position: relative
+  position: fixed
+  @media(max-width: 770px)
+    +outer-container(100%)
+    position: relative
   a
     +red-link
   h1
@@ -33,3 +36,16 @@ header
           color: $black
       @media(max-width: 600px)
         width: 75px
+@media(max-width: 400px)
+  header
+    h1
+      +span-columns(12)
+      text-align: center
+    .button-wrap
+      +span-columns(12)
+      .button
+
+        width: 100%
+        float: none
+        margin: 5px auto 0 auto
+        top: 0

@@ -5,13 +5,15 @@
   +flex-wrap(wrap)
   +justify-content(center)
   +outer-container(100%)
+  padding: 88px 0
+  @media(max-width: 770px)
+    padding-top: 0
   a
     +white-link
 
   .note-box
     color: $white
     width: 300px
-    height: 100%
     background: $black
     margin: 25px
     text-align: center
@@ -48,13 +50,18 @@
     .note-edit
       p
         display: inline-block
-        padding: 10px 10px
+        padding: 10px 30px
         width: 100%
-        font-size: 20px
+        font-size: 14px
         text-transform: lowercase
         border-top: 1px solid $grey4
-      a
-        +white-link
+        color: $white
+      .btn
+        margin: 20px 0
+        a
+          background: $red
+          padding: 10px 20px
+          +white-link
 
 // Show Page
 
@@ -62,7 +69,10 @@
   +display(flex)
   +justify-content(center)
   +align-items(center)
+  padding: 88px 0
   color: $white
+  @media(max-width: 770px)
+    padding-top: 0
   .show-box
     width: 750px
     height: auto
@@ -89,12 +99,35 @@
     .show-content
       margin: 10px 0 50px 0
 
+      textarea
+        background: transparent
+        border-bottom: 1px solid $red
+        border-top: none
+        border-left: none
+        border-right: none
+        color: $white
+
     .show-edit
       a
         +red-link
 
     .show-links
+      +display(flex)
+      +align-items(center)
       margin-top: 20px
+
+
+      input[type="submit"]
+        background: $red
+        color: $white
+        transition: .3s ease-in-out
+        border-radius: 0px
+        font-weight: 400
+        padding: 14px 20px
+        margin: 0 10px
+        &:hover
+          color: $black
+
       a
         background: $red
         padding: 10px 20px
@@ -104,3 +137,17 @@
           color: $black
 
 // New Notes
+
+.new-wrapper
+  +display(flex)
+  +justify-content(center)
+  +align-items(center)
+  padding: 88px 0
+  @media(max-width: 770px)
+    padding-top: 0
+  h1
+    text-transform: uppercase
+    text-align: center
+    margin-top: 20px
+    font-size: 24px
+    color: $red

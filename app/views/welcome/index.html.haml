@@ -1,2 +1,22 @@
-.welcome
-  %h1 This is the welcome hompage
+.welcome-wrapper
+  .header
+    %h1 Remember
+
+  .info
+    %h1 Let's remember stuff!
+    %hr
+    .col-left
+      %h1 Sign Up
+      .image.left
+      %p Sign up to remember things the digital way.
+      = link_to "Sign Up", new_user_session_path, :class => "button"
+    .col-center
+      %h1 Add Notes
+      .image.center
+      %p Log in and store notes in your personal note folder.
+      = link_to "Add Notes", new_user_session_path, :class => "button"
+    .col-right
+      %h1 Edit Notes
+      .image.right
+      %p Edit and delete notes.
+      = link_to "Edit Notes", new_user_session_path, :class => "button"

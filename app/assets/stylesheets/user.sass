@@ -1,0 +1,21 @@
+.user-wrapper
+  height: 90vh
+  +outer-container(50%)
+  padding-top : 88px
+  @media(max-width: 770px)
+    padding-top: 0
+    +outer-container(90%)
+  .user-form
+    margin: 50px
+
+    input[type="submit"]
+      background: $red
+      color: $white
+      transition: .3s ease-in-out
+      border-radius: 0px
+      font-weight: 400
+      &:hover
+        color: $black
+
+    a
+      +red-link

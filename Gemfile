@@ -18,6 +18,7 @@ gem 'font-awesome-sass'
 gem 'unicorn'
 gem 'haml', '~> 4.0.7'
 gem 'simple_form', '~> 3.1.0'
+gem 'aws-sdk', '< 2.0'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
